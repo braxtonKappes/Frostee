@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "nodemon -r dotenv/config ./bin/www"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "express-jwt": "^7.7.5",
+    "express-oauth2-jwt-bearer": "^1.1.0",
+    "express-validator": "^6.14.2",
+    "jwks-rsa": "^2.1.5",
+    "pg": "^8.8.0",
+    "sequelize": "^6.25.0",
+    "sequelize-cli": "^6.5.1"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^6.0.0",
+    "nodemon": "^2.0.20"
+  }
+}
