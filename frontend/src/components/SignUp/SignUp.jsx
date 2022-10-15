@@ -15,12 +15,34 @@ function SignUp() {
     if (!isLoading) setEmail(user.email)
   }, [isLoading, user?.email])
 
+  const handleSubmit = async (e) => {
+
+    e.preventDefault();
+
+    const newUser = {username: userName, email}
+
+    console.log(newUser)
+
+    const callApi = await fetch('/api/users/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newUser)
+    });
+
+    console.log(callApi)
+
+    return callApi
+
+  };
+
   if (!isLoading) {
     return (
       <div className='signup-wrapper'>
         <div className="signup-body">
           <div className="signup-content">
-            <form action="" className="signup-form">
+            <form onSubmit={handleSubmit} className="signup-form">
               <input
                 type="text"
                 className='email-input'
@@ -34,7 +56,7 @@ function SignUp() {
                 value={userName}
                 onChange={(e)=> setUserName(e.target.value)}
               />
-              <button className="signup-confirm">Confirm</button>
+              <button type='submit' className="signup-confirm">Confirm</button>
             </form>
           </div>
         </div>
