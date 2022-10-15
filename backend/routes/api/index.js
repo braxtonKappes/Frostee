@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const asyncHandler = require('express-async-handler');
 const { checkJwt } = require('../../middleware/auth.middleware');
-const { Game } = require('../../db/models');
+const { Game, Category } = require('../../db/models');
 
 
 
@@ -16,6 +16,10 @@ router.get('/', asyncHandler(async (req, res, next) => {
   const genre = 'horror'
   const developer = 'EA'
 
+  // const cat = await Category.create({
+  //   name: 'test'
+  // });
+
   const game = await Game.create({
     title,
     description,
@@ -25,8 +29,10 @@ router.get('/', asyncHandler(async (req, res, next) => {
   });
 
   // const game = await Game.findByPk(1);
-  game.original_price = 19.99;
-  game.discount = 10;
+  // game.original_price = 19.99;
+  // game.discount = 10;
+
+  game.category_id = 1;
 
   await game.save();
 
