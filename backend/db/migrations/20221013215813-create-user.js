@@ -29,14 +29,14 @@ module.exports = {
       },
       profile_url: {
         type: Sequelize.STRING,
-        defaultValue: `${id}/${username}`
+        defaultValue: `${this.id}/${this.username}`
       },
       online_status: {
         type: Sequelize.STRING,
         defaultValue: 'Online'
       },
       user_bio: {
-        type: Sequelize.TEXT(2000),
+        type: Sequelize.TEXT,
         defaultValue: ''
       },
       user_location: {
@@ -48,11 +48,11 @@ module.exports = {
         defaultValue: 0
       },
       owned_games: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.ARRAY(Sequelize.INTEGER),
         defaultValue: []
       },
       user_friends: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.ARRAY(Sequelize.INTEGER),
         defaultValue: []
       },
       createdAt: {

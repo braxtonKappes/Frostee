@@ -3,9 +3,9 @@ const asyncHandler = require('express-async-handler');
 const { checkJwt } = require('../../middleware/auth.middleware');
 const { Game, Category } = require('../../db/models');
 
+const userRouter = require('./users')
 
-
-
+router.use('/users', userRouter);
 // api routers
 
 router.get('/', asyncHandler(async (req, res, next) => {

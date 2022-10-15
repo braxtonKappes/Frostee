@@ -12,6 +12,13 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
     }
+
+    static async createUser(user) {
+
+      const newUser = await User.create({user});
+
+      return newUser;
+    }
   }
   User.init({
     username: {
