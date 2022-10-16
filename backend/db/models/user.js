@@ -15,7 +15,12 @@ module.exports = (sequelize, DataTypes) => {
 
     static async createUser(user) {
 
-      const newUser = await User.create({user});
+      const {username, email} = user;
+
+      const newUser = await User.create({
+        username,
+        email
+      });
 
       return newUser;
     }
@@ -45,7 +50,6 @@ module.exports = (sequelize, DataTypes) => {
     },
     profile_url: {
       type: DataTypes.STRING,
-      allowNull: false,
       validate: {
         isAlphanumeric: true
       }
@@ -64,7 +68,6 @@ module.exports = (sequelize, DataTypes) => {
     },
     user_balance: {
       type: DataTypes.FLOAT,
-      allowNull: false,
       validate: {
         isFloat: true
       }
