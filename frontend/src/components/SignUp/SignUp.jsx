@@ -1,12 +1,13 @@
 import './SignUp.css'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 // import { useDispatch } from 'react-redux';
 import { useAuth0 } from '@auth0/auth0-react';
-import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function SignUp() {
   // const dispatch = useDispatch();
-  // const [errors, setErrors] = useState([]);
+  const navigate = useNavigate();
+  const [errors, setErrors] = useState([]);
   const [userName, setUserName] = useState('')
   const [email, setEmail] = useState('')
   const { user, isLoading } = useAuth0();
@@ -21,9 +22,8 @@ function SignUp() {
 
     const newUser = {username: userName, email}
 
-    console.log(newUser)
 
-    const callApi = await fetch('/api/users/signup', {
+    const fetchData = await fetch('/api/users/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -31,9 +31,11 @@ function SignUp() {
       body: JSON.stringify(newUser)
     });
 
-    console.log(callApi)
-
-    return callApi
+    if (fetchData?.errors) {
+      setErrors(fetchData.errors);
+    } else {
+      navigate(`/profile`);
+    }
 
   };
 
@@ -43,6 +45,13 @@ function SignUp() {
         <div className="signup-body">
           <div className="signup-content">
             <form onSubmit={handleSubmit} className="signup-form">
+
+              <div>
+                {errors.map((error, ind) => (
+                  <div key={ind}>{error}</div>
+                ))}
+              </div>
+
               <input
                 type="text"
                 className='email-input'
