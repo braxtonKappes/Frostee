@@ -12,16 +12,24 @@ function NavBar() {
       <div className="navbar-body">
         <div className="navbar-content">
         <button
-        className="signup-btn"
-        onClick={() =>
-        loginWithRedirect({
-          screen_hint: 'signup',
-          redirectUri: 'http://localhost:3000/complete_registration'
-        })
-      }
-    >
-      Sign Up
-    </button>
+          className="signup-btn"
+          onClick={() =>
+            loginWithRedirect({
+              screen_hint: "signup",
+              redirectUri: "http://localhost:3000/profile"
+            })
+          }
+        >
+          Sign Up
+        </button>
+
+      <button
+        className="navbar-content"
+        onClick={() => loginWithRedirect()}
+      >
+        Log In
+      </button>
+
         </div>
       </div>
     </div>

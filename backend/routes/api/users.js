@@ -1,18 +1,22 @@
 const userRouter = require('express').Router();
 const asyncHandler = require('express-async-handler');
-const { checkJwt } = require('../../middleware/auth.middleware');
 
+const { validateSignup } = require('../../middleware/validators/userValidation');
+const { checkJwt } = require('../../middleware/auth.middleware');
 const { User } = require('../../db/models');
 
 
-userRouter.post('/signup', asyncHandler(async (req, res, next) => {
+userRouter.post('/signup', validateSignup, asyncHandler(async (req, res, next) => {
 
 
   const {username, email} = req.body
 
-  const newUser = await User.createUser({username, email})
 
-  return res.json({user: newUser})
+  User.createUser({
+    username, email
+  })
+  .then(res => res.json({user: newUser}))
+    .catch(err => res.json({errors: err}));
 
 }));
 

@@ -6,8 +6,8 @@ import SignUp from './components/SignUp/SignUp'
 function App() {
   return (
     <Routes>
-      <Route path='/' element={<NavBar/>}/>
-      <Route path='/complete_registration' element={<SignUp/>}/>
+      <Route path='/' element={<NavBar />} />
+      <Route path='/profile' element={<SignUp />} />
     </Routes>
   );
 }

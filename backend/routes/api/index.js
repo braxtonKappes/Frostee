@@ -16,7 +16,7 @@ router.get('/', asyncHandler(async (req, res, next) => {
 
 
 // will require authentication to access any routes after
-router.use(checkJwt);
+// router.use(checkJwt);
 
 router.get('/protected', asyncHandler(async (req, res, next) => {
 

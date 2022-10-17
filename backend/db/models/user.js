@@ -24,6 +24,14 @@ module.exports = (sequelize, DataTypes) => {
 
       return newUser;
     }
+
+    static async updateUser(userData) {
+
+      const { id } = userData;
+
+      return await User.update(userData, { where: { id }});
+    }
+
   }
   User.init({
     username: {
