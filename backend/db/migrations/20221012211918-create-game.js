@@ -44,11 +44,10 @@ module.exports = {
         defaultValue: [],
         allowNull: false
       },
-      // category: {
-      //   type: Sequelize.STRING,
-      //   references: { model: 'Categories' },
-      //   allowNull: false
-      // },
+      category_id: {
+        type: Sequelize.INTEGER,
+        references: { model: 'Categories' },
+      },
       genre: {
         type: Sequelize.STRING,
         allowNull: false

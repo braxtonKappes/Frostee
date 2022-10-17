@@ -12,8 +12,6 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-
-      // Game.belongsTo(models.Category, { foreignKey: 'category' });
     }
 
     static async getCurrentGame(id) {
@@ -79,14 +77,10 @@ module.exports = (sequelize, DataTypes) => {
     languages: {
       type: DataTypes.ARRAY(DataTypes.STRING),
     },
-    // category: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    //   references: { model: 'Categories' },
-    //   validate: {
-    //     notEmpty: true
-    //   }
-    // },
+    category_id: {
+      type: DataTypes.INTEGER,
+      references: { model: 'Categories' },
+    },
     genre: {
       type: DataTypes.STRING,
       allowNull: false,
