@@ -15,7 +15,7 @@ const validateSignup = [
     .not()
     .isEmail()
     .withMessage('Username cannot be an email.'),
-    handleValidationErrors
+  handleValidationErrors
 ];
 
 

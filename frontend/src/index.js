@@ -3,6 +3,8 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import { BrowserRouter } from "react-router-dom";
 import Auth0ProviderWithHistory from './utils/auth/auth0-provider';
+import { Provider } from 'react-redux';
+import store from './store';
 
 import './index.css';
 
@@ -13,7 +15,9 @@ root.render(
   <StrictMode>
     <BrowserRouter>
       <Auth0ProviderWithHistory>
-        <App />
+        <Provider store={store}>
+          <App />
+        </Provider>
       </Auth0ProviderWithHistory>
     </BrowserRouter>
   </StrictMode>
