@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const notFoundHandler = require('./middleware/notFoundHandler.middleware');
 const errorHandler = require('./middleware/errorHandler.middleware');
+const validationErrorHandler = require('./middleware/validationErrorHandler.middleware');
 
 const app = express();
 
@@ -37,6 +38,7 @@ app.use(routes);
 
 // Error handling middleware 
 app.use(notFoundHandler);
+app.use(validationErrorHandler);
 app.use(errorHandler);
 
 

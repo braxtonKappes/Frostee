@@ -7,14 +7,7 @@ export const frostyApi = createApi({
   endpoints: (builder) => ({
     getUser: builder.query({
       query: (id) => `users/${id}`,
-      providesTags: (result) =>
-        result ?
-          [
-            ...result.map(({ id }) => ({ type: 'Users', id})),
-            { type: 'Users', id: 'LIST' },
-          ]
-        :
-          [{ type: 'Users', id: 'LIST'}],
+      providesTags: ['User']
     }),
 
     createUser: builder.mutation({
@@ -28,7 +21,7 @@ export const frostyApi = createApi({
           },
         }
       },
-      invalidatesTags: [{ type: 'Users', id: 'LIST '}]
+      invalidatesTags: ['User']
     }),
 
     updateUser: builder.mutation({
@@ -36,10 +29,13 @@ export const frostyApi = createApi({
         return {
           url: 'users',
           method: 'PUT',
-          body: data
+          body: data,
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+          },
         }
       },
-      invalidatesTags: (res, err, { id }) => [{ type: 'Users', id }]
+      invalidatesTags: ['User']
 
     }),
 
