@@ -2,9 +2,9 @@ const { validationResult } = require('express-validator');
 
 const validationErrorHandler = (req, res, next) => {
 
-  const validationErrors = validationResult(req);
+  const validationErrors = validationResult(req.body);
 
-  if (!verror.isEmpty()) {
+  if (!validationErrors.isEmpty()) {
     const errors = validationErrors.array().map(e => `${e.msg}`);
 
     const err = Error('Validation Error');

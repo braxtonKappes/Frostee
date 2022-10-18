@@ -20,9 +20,12 @@ export const frostyApi = createApi({
     createUser: builder.mutation({
       query(data) {
         return {
-          url: 'users',
+          url: 'users/signup',
           method: 'POST',
-          data
+          body: data,
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+          },
         }
       },
       invalidatesTags: [{ type: 'Users', id: 'LIST '}]
@@ -33,7 +36,7 @@ export const frostyApi = createApi({
         return {
           url: 'users',
           method: 'PUT',
-          data
+          body: data
         }
       },
       invalidatesTags: (res, err, { id }) => [{ type: 'Users', id }]
@@ -45,10 +48,12 @@ export const frostyApi = createApi({
 
 
 
-    
+
   })
 });
 
 export const { 
-  useGetUserQuery, 
+  useGetUserQuery,
+  useCreateUserMutation,
+  useUpdateUserMutation 
 } = frostyApi;

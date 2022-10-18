@@ -3,7 +3,7 @@ import { setupListeners } from '@reduxjs/toolkit/query';
 import { frostyApi } from './api/frostyApi';
 
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     [frostyApi.reducerPath]: frostyApi.reducer,
   },
@@ -15,5 +15,5 @@ const store = configureStore({
 
 setupListeners(store.dispatch);
 
-export default store;
+
 

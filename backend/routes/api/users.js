@@ -6,6 +6,7 @@ const { checkJwt } = require('../../middleware/auth.middleware');
 const { User } = require('../../db/models');
 
 
+// serving as test route for now
 userRouter.get('/', asyncHandler(async (req, res, next) => {
 
   const users = await User.findAll();
@@ -22,15 +23,27 @@ userRouter.post('/signup', asyncHandler(async (req, res, next) => {
 
   const {username, email} = req.body
 
+  console.log(req.body)
 
-  return User.createUser({
-    username, email
-  })
-  .then(res => res.json({user: newUser}))
-    .catch(err => res.json({errors: err}));
+  console.log(`Hello ${username} - ${email}`)
+
+  const newUser = await User.createUser({username, email, ...req.body});
+  
+  res.json(newUser);
 
 }));
 
+
+userRouter.put('/', checkJwt, asyncHandler(async (req, res, next) => {
+
+  // add validation
+
+
+  const updatedUser = await User.updateUser({...req.body});
+  
+  res.json(updatedUser);
+
+}));
 
 
 

@@ -1,4 +1,4 @@
-const { handleValidationErrors } = require('../validationErrorHandler.middleware');
+const validationErrorHandler = require('../validationErrorHandler.middleware')
 const { check } = require('express-validator');
 
 
@@ -15,7 +15,7 @@ const validateSignup = [
     .not()
     .isEmail()
     .withMessage('Username cannot be an email.'),
-  handleValidationErrors
+  validationErrorHandler
 ];
 
 

@@ -3,8 +3,8 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import { BrowserRouter } from "react-router-dom";
 import Auth0ProviderWithHistory from './utils/auth/auth0-provider';
-import { Provider } from 'react-redux';
-import store from './store';
+import { ApiProvider } from '@reduxjs/toolkit/dist/query/react';
+import { frostyApi } from './store/api/frostyApi';
 
 import './index.css';
 
@@ -15,9 +15,9 @@ root.render(
   <StrictMode>
     <BrowserRouter>
       <Auth0ProviderWithHistory>
-        <Provider store={store}>
+        <ApiProvider api={frostyApi}>
           <App />
-        </Provider>
+        </ApiProvider>
       </Auth0ProviderWithHistory>
     </BrowserRouter>
   </StrictMode>
