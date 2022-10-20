@@ -24,9 +24,17 @@ function HomePage() {
       <div className="homepage-body">
         <div className="homepage-gutter">
           <div className="homepage-gutter-block">
-            <div className="homepage-gutter-header">
-              <a href=""></a>
-              <br />Gift Cards
+            <div className="homepage-gutter-header-1">
+              <a href="?"></a>
+              <br />
+              <h1 className="homepage-gutter-header-title">GIFT CARDS</h1>
+              <a href="?">Now Available on Steam</a>
+            </div>
+            <div className="homepage-gutter-header-2">
+              <h1 className="homepage-gutter-header-title">RECOMMENDED</h1>
+              <a href="?">By Friends</a>
+              <a href="?">By Curators</a>
+              <a href="?">Tags</a>
             </div>
           </div>
         </div>
