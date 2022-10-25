@@ -70,6 +70,9 @@ function HomePage() {
             </div>
           </div>
         </div>
+        <div className="homepage-featured-recommended">
+          
+        </div>
       </div>
     </div>
   )
