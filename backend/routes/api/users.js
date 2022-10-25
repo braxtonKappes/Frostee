@@ -1,31 +1,31 @@
 const userRouter = require('express').Router();
 const asyncHandler = require('express-async-handler');
-
-const { validateSignup } = require('../../middleware/validators/userValidation');
-const { checkJwt } = require('../../middleware/auth.middleware');
 const { User } = require('../../db/models');
 
+// Middleware that takes care of checking if a request
+// is coming from an authenticated user
+const { requiresAuth } = require('express-openid-connect');
 
-// serving as test route for now
+// *** TODO validation setup, currently not working correctly as a middleware
+const { validateSignup } = require('../../middleware/validators/userValidation');
+// ***
+
+
 userRouter.get('/', asyncHandler(async (req, res, next) => {
 
-  const users = await User.findAll();
+  const { id } = req.body;
 
-  console.log(users)
+  const users = await User.findByPk(id);
 
   res.json(users);
 
 }));
 
 
-userRouter.post('/signup', asyncHandler(async (req, res, next) => {
+userRouter.post('/', requiresAuth(), asyncHandler(async (req, res, next) => {
 
 
   const {username, email} = req.body
-
-  console.log(req.body)
-
-  console.log(`Hello ${username} - ${email}`)
 
   const newUser = await User.createUser({username, email, ...req.body});
   
@@ -34,9 +34,7 @@ userRouter.post('/signup', asyncHandler(async (req, res, next) => {
 }));
 
 
-userRouter.put('/', checkJwt, asyncHandler(async (req, res, next) => {
-
-  // add validation
+userRouter.put('/', requiresAuth(), asyncHandler(async (req, res, next) => {
 
 
   const updatedUser = await User.updateUser({...req.body});

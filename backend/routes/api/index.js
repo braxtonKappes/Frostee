@@ -1,27 +1,15 @@
 const router = require('express').Router();
 const asyncHandler = require('express-async-handler');
-const { checkJwt } = require('../../middleware/auth.middleware');
-const { Game, Category } = require('../../db/models');
+
 
 const userRouter = require('./users')
 
+// Seperate API routes
 router.use('/users', userRouter);
-// api routers
-
-router.get('/', asyncHandler(async (req, res, next) => {
 
 
 
-}));
+// Can add global API routes here if needed
 
-
-// will require authentication to access any routes after
-// router.use(checkJwt);
-
-router.get('/protected', asyncHandler(async (req, res, next) => {
-
-  
-
-}));
 
 module.exports = router;

@@ -1,4 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { useAuth0 } from '@auth0/auth0-react';
+
 
 export const frostyApi = createApi({
 
@@ -13,11 +15,11 @@ export const frostyApi = createApi({
     createUser: builder.mutation({
       query(data) {
         return {
-          url: 'users/signup',
+          url: 'users',
           method: 'POST',
           body: data,
           headers: {
-            'Content-type': 'application/json; charset=UTF-8',
+            'Content-type': 'application/json; charset=UTF-8'
           },
         }
       },
