@@ -11,8 +11,7 @@ module.exports = {
       },
       username: {
         type: Sequelize.STRING(32),
-        allowNull: false,
-        unique: true
+        allowNull: false
       },
       email: {
         type: Sequelize.STRING,
@@ -29,7 +28,6 @@ module.exports = {
       },
       profile_url: {
         type: Sequelize.STRING,
-        defaultValue: `${this.id}/${this.username}`
       },
       online_status: {
         type: Sequelize.STRING,
