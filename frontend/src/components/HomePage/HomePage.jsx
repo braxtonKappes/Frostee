@@ -1,9 +1,9 @@
 import './HomePage.css'
 // eslint-disable-next-line
 import React, { useState } from 'react'
+import Carousel from '../Carousel/Carousel'
 
 function HomePage() {
-
   return (
     <div className='homepage-wrapper'>
       <div className="homepage-banner-body">
@@ -70,8 +70,9 @@ function HomePage() {
             </div>
           </div>
         </div>
+        <Carousel/>
         <div className="homepage-featured-recommended">
-          
+
         </div>
       </div>
     </div>

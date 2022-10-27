@@ -1,0 +1,24 @@
+.cara-main {
+  display: flex;
+  position: absolute;
+  display: block;
+  z-index: -2;
+  min-height: 100%;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transition-timing-function: transitionTimingFunction;
+}
+.cara-bg1 {
+}
+.cara-bg2 {
+  background-color: green;
+}
+.cara-bg3 {
+  background-color: yellow;
+}
+.cara-bg4 {
+  background-color: orange;
+}
