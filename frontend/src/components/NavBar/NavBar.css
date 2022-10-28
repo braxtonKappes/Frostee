@@ -1,3 +1,14 @@
 .navbar-wrapper {
+  height: 120px;
   background-color: red;
+}
+
+.navbar-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-content {
+
 }

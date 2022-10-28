@@ -1,0 +1,23 @@
+.search-navbar-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-navbar-content {
+  display: flex;
+  border: solid 1px;
+  padding: 0px 15px 0px 15px;
+  margin: 10px;
+}
+
+.search-navbar-links {
+  display: flex;
+
+}
+
+.search-navbar-links > h3 {
+  padding: 0px 10px 0px 10px;
+  font-size: 12px;
+
+}

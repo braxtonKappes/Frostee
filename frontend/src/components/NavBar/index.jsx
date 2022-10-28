@@ -9,6 +9,19 @@ function NavBar() {
     <div className='navbar-wrapper'>
       <div className="navbar-body">
         <div className="navbar-content">
+          <img src="" alt="Frostee Logo" />
+          <a href="?">STORE</a>
+          <a href="?">COMMUNITY</a>
+          <a href="?">ABOUT</a>
+          <a href="?">SUPPORT</a>
+          <button
+            className='login-btn'
+            onClick={()=>
+              loginWithRedirect()
+            }
+          >
+          login
+          </button>
           <button
           className="signup-btn"
           onClick={() =>
