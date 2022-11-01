@@ -13,6 +13,15 @@ module.exports = {
         type: Sequelize.STRING(60),
         allowNull: false
       },
+      title_image: {
+        type: Sequelize.TEXT,
+        allowNull: false
+      },
+      images: {
+        type: Sequelize.ARRAY(Sequelize.STRING),
+        defaultValue: [],
+        allowNull: false
+      },
       description: {
         type: Sequelize.TEXT,
         allowNull: false
