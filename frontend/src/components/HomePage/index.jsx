@@ -1,7 +1,6 @@
 import './HomePage.css'
 // eslint-disable-next-line
 import React, { useState } from 'react'
-import Carousel from '../Carousel'
 import HomePageGutter from '../HomePageGutter'
 import SearchNavBar from '../SearchNavBar'
 import './HomePage.css'
@@ -15,7 +14,6 @@ function HomePage() {
       </div>
       <div className="homepage-body">
         <HomePageGutter />
-        <Carousel/>
         <div className="homepage-featured-recommended">
         </div>
       </div>

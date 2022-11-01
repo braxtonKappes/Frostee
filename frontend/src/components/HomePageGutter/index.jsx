@@ -10,7 +10,7 @@ export default class index extends Component {
               <a href="?"></a>
               <br />
               <h1 className="homepage-gutter-header-title">GIFT CARDS</h1>
-              <a href="?">Now Available on Frosty</a>
+              <a href="?">Now Available on Frostee</a>
             </div>
             <div className="homepage-gutter-header">
               <h1 className="homepage-gutter-header-title">RECOMMENDED</h1>

@@ -1,14 +1,46 @@
 .navbar-wrapper {
   height: 120px;
-  background-color: red;
+  background-color: #171a21;
 }
 
 .navbar-body {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-.navbar-content {
+.menuitem {
+  padding-top: 45px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-bottom: 7px;
+}
+
+.navbar-container {
+  display: block;
+  position: relative;
+  padding-top: 45px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-bottom: 7px;
+  line-height: 16px;
+  float: left;
+  font-size: 14px;
+  color: #b8b6b4;
+  text-transform: uppercase;
+}
+
+.logo {
+  float: left;
+  padding-top: 30px;
+  margin-right: 40px;
+  width: 176px;
+  height: 44px;
+}
+
+.navbar-actions {
+  font-size: 11px;
+  line-height: 24px;
+  vertical-align: top;
+  display: inline-block;
 
 }
