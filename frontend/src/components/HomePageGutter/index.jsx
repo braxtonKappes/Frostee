@@ -7,48 +7,48 @@ export default class index extends Component {
       <div className="homepage-gutter">
           <div className="homepage-gutter-block">
             <div className="homepage-gutter-header">
-              <a href="?"></a>
+              <a href="?">Image</a>
               <br />
               <h1 className="homepage-gutter-header-title">GIFT CARDS</h1>
-              <a href="?">Now Available on Frostee</a>
+              <a href="?" className='gutter-tab'>Now Available on Frostee</a>
             </div>
             <div className="homepage-gutter-header">
               <h1 className="homepage-gutter-header-title">RECOMMENDED</h1>
-              <a href="?">By Friends</a>
-              <a href="?">By Curators</a>
-              <a href="?">Tags</a>
+              <a href="?" className='gutter-tab'>By Friends</a>
+              <a href="?" className='gutter-tab'>By Curators</a>
+              <a href="?" className='gutter-tab'>Tags</a>
             </div>
             <div className="homepage-gutter-header">
               <h1 className="homepage-gutter-header-title">DISCOVERY QUEUES</h1>
-              <a href="?">Recommendations</a>
-              <a href="?">New Releases</a>
+              <a href="?" className='gutter-tab'>Recommendations</a>
+              <a href="?" className='gutter-tab'>New Releases</a>
             </div>
             <div className="homepage-gutter-header">
               <h1 className="homepage-gutter-header-title">BROWSE CATEGORIES</h1>
-              <a href="?">Top Sellers</a>
-              <a href="?">Upcoming</a>
-              <a href="?">Specials</a>
-              <a href="?">VR Titles</a>
-              <a href="?">Controller-Friendly</a>
+              <a href="?" className='gutter-tab'>Top Sellers</a>
+              <a href="?" className='gutter-tab'>Upcoming</a>
+              <a href="?" className='gutter-tab'>Specials</a>
+              <a href="?" className='gutter-tab'>VR Titles</a>
+              <a href="?" className='gutter-tab'>Controller-Friendly</a>
             </div>
             <div className="homepage-gutter-header">
               <h1 className="homepage-gutter-header-title">BROWSE BY GENRE</h1>
-              <a href="?">Free to Play</a>
-              <a href="?">Early Access</a>
-              <a href="?">Action</a>
-              <a href="?">Adventure</a>
-              <a href="?">Casual</a>
-              <a href="?">Indie</a>
-              <a href="?">Massively Multiplayer</a>
-              <a href="?">Racing</a>
-              <a href="?">RPG</a>
-              <a href="?">Simulation</a>
-              <a href="?">Sports</a>
-              <a href="?">Strategy</a>
+              <a href="?" className='gutter-tab'>Free to Play</a>
+              <a href="?" className='gutter-tab'>Early Access</a>
+              <a href="?" className='gutter-tab'>Action</a>
+              <a href="?" className='gutter-tab'>Adventure</a>
+              <a href="?" className='gutter-tab'>Casual</a>
+              <a href="?" className='gutter-tab'>Indie</a>
+              <a href="?" className='gutter-tab'>Massively Multiplayer</a>
+              <a href="?" className='gutter-tab'>Racing</a>
+              <a href="?" className='gutter-tab'>RPG</a>
+              <a href="?" className='gutter-tab'>Simulation</a>
+              <a href="?" className='gutter-tab'>Sports</a>
+              <a href="?" className='gutter-tab'>Strategy</a>
             </div>
             <div className="homepage-gutter-header">
               <h1 className="homepage-gutter-header-title">RECENTLY VIEWED</h1>
-              /* query database for recently viewed */
+                Render recently viewed games here
             </div>
           </div>
         </div>

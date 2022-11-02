@@ -12,9 +12,10 @@ function HomePage() {
       <div className="homepage-banner-body">
         <img src="" alt="" className="homepage-banner-img" />
       </div>
+      <HomePageGutter />
       <div className="homepage-body">
-        <HomePageGutter />
         <div className="homepage-featured-recommended">
+          
         </div>
       </div>
     </div>
