@@ -6,10 +6,12 @@ import HomePage from './components/HomePage'
 
 function App() {
   return (
-    <Routes>
-      <Route path='/' element={<><NavBar/><HomePage/></>}/>
-      <Route path='/complete_registration' element={<SignUp/>}/>
-    </Routes>
+    <div className='all-content-wrapper'>
+        <Routes>
+          <Route path='/' element={<><NavBar/><HomePage/></>}/>
+          <Route path='/complete_registration' element={<SignUp/>}/>
+        </Routes>
+    </div>
   );
 }
 

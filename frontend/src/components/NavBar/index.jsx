@@ -19,6 +19,7 @@ function NavBar() {
           <a className='menuitem' href="?">ABOUT</a>
           <a className='menuitem' href="?">SUPPORT</a>
         </div>
+        <div className="navbar-spacer"></div>
         <div className="navbar-actions">
           <button
             className='login-btn'
