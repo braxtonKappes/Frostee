@@ -33,6 +33,16 @@ module.exports = (sequelize, DataTypes) => {
         isAlphanumeric: true
       }
     },
+    title_image: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        notEmpty: true
+      }
+    },
+    images: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
+    },
     description: {
       type: DataTypes.TEXT,
       allowNull: false,
