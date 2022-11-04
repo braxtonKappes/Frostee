@@ -33,10 +33,9 @@ function SignUp() {
 
     if (fetchData?.errors) {
       setErrors(fetchData.errors);
-    } else {
-      navigate(`/profile`);
-    }
+    } 
 
+    // TODO update profile values
   };
 
   if (!isLoading) {
