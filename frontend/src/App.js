@@ -2,8 +2,7 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar'
 import SignUp from './components/SignUp/SignUp'
-
-import HomePage from './components/HomePageTest/HomePage'
+import HomePage from './components/HomePage/HomePage'
 import Carousel from './components/Carousel/Carousel';
 import SpecialsCarousel from './components/Carousel/SpecialsCarousel';
 import CategoryCarousel from './components/Carousel/CategoryCarousel';
@@ -33,14 +32,12 @@ function App() {
 
 
   return (
-    <Routes>
-
-      <Route path='/test' element={<Carousel games={games}/>} />
-      <Route path='/' element={<><NavBar/><HomePage/></>}/>
-      <Route path='/blockTest' element={<><GutterBlock/></>}/>
-      <Route path='/complete_registration' element={<SignUp/>}/>
-
-    </Routes>
+    <div className='all-content-wrapper'>
+        <Routes>
+          <Route path='/' element={<><NavBar/><HomePage/></>}/>
+          <Route path='/complete_registration' element={<SignUp/>}/>
+        </Routes>
+    </div>
   );
 }
 
