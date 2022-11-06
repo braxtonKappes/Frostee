@@ -1,3 +1,7 @@
 .homepage-wrapper {
   width: 1420px;
 }
+
+.homepage-contents {
+  display: flex;
+}
