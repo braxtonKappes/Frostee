@@ -1,7 +1,17 @@
 import React from "react";
 import "./Carousel.css";
 
-function Carousel({ games }) {
+function Carousel() {
+  const games = [
+
+    {title: "game 1", info: "game info here", title_image:"images/building.png", images: ["images/building.png","images/building.png","images/building.png","images/building.png"]},
+    {title: "game 2", info: "game info here", title_image:"images/cat.png", images: ["images/cat.png","images/cat.png","images/cat.png","images/cat.png"]},
+    {title: "game 3", info: "game info here", title_image:"images/fish.jpg", images: ["images/fish.jpg","images/fish.jpg","images/fish.jpg","images/fish.jpg"]},
+    {title: "game 4", info: "game info here", title_image:"images/landscape.jpg", images: ["images/landscape.jpg","images/landscape.jpg","images/landscape.jpg","images/landscape.jpg"]},
+    {title: "game 5", info: "game info here", title_image:"images/lightning.png", images: ["images/lightning.png","images/lightning.png","images/lightning.png","images/lightning.png"]},
+    {title: "game 6", info: "game info here", title_image:"images/owl.jpg", images: ["images/owl.jpg","images/owl.jpg","images/owl.jpg","images/owl.jpg"]},
+
+  ];
 
   let currentSlide = 0;
 
@@ -20,7 +30,7 @@ function Carousel({ games }) {
         currentSlide = newVal;
       } else {
         currentSlide = maxSize;
-      } 
+      }
 
     } else if (direction === 'next') {
 
@@ -56,7 +66,7 @@ function Carousel({ games }) {
       <div className="arrow-cont">
         <div onClick={() => handleClick('prev')} className="arrow arrow-left"></div>
       </div>
-      
+
       <div className="carousel-container">
 
         <div className="carousel-content">
@@ -70,11 +80,11 @@ function Carousel({ games }) {
 
                   <img src={game.title_image}></img>
 
-                  <div className="carousel-slide-side"> 
+                  <div className="carousel-slide-side">
                   <div className="carousel-slide-side-top">
                     <h2>{game.title}</h2>
                   </div>
-                  
+
                   <div className="carousel-slide-side-images">
                     {games && game.images.map((image, ind) => {
 
@@ -82,15 +92,15 @@ function Carousel({ games }) {
 
                       return (
                         <img src={image}></img>
-                      ) 
+                      )
                     })}
                   </div>
-                  
+
                   </div>
                 </div>
               )
             })}
-            
+
           </div>
 
         </div>

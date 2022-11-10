@@ -11,20 +11,9 @@
   box-shadow: 0 0 3px rgb(0 0 0 / 40%);
 }
 
-.search-navbar-links {
-  display: flex;
-  height: 35px;
-  align-items: center;
-}
-
-.search-navbar-links > h3 {
-  padding: 0px 10px 0px 10px;
-  font-size: 12px;
-}
-
-a.dropdown-tab {
+.dropdown-tab {
   display: inline;
-  color: #e5e5e5;
+  /* color: #e5e5e5; */
 }
 
 a.tab {
@@ -32,11 +21,66 @@ a.tab {
   color: #e5e5e5;
 }
 
-.search-navbar-links .tab {
+.search-navbar-content .tab {
   font-size: 14px;
-  padding: 5px 10px 5px 10px;
+  padding: 12px 20px 12px 20px;
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
   white-space: nowrap;
+}
+
+.tab {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  text-decoration: underline;
+  transition-property: text-decoration;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
+}
+.tab:hover .dropdown-content {
+  transition-property: border;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  display: block;
+  left: 0px;
+  z-index: 200;
+  position: absolute;
+  box-shadow: 0 0 12px #000000;
+  padding: 8px 5px 8px 5px;
+  background: linear-gradient(90deg, rgba(33, 162, 255, 0.1) 1.89%, rgba(50, 50, 51, 0) 50%), linear-gradient(180deg, #575860 11.6%, #3A4852 54.73%, #2C2D34 100%);
+}
+.tab:hover {
+  background: linear-gradient(90deg, rgba(62, 103, 150, 0.919) 8%, rgba(58, 120, 177, 0.8) 25.23%, rgba(15, 32, 110, 0) 100%);
+}
+
+.dropdown-menu-item {
+  color: #D8D8D8;
+  cursor: pointer;
+  text-shadow: 0px 2px 3px rgb(0 0 0 / 30%);
+  width: fit-content;
+  border-bottom: 2px solid #ffffff00;
+  padding: 3px 1px 2px 1px;
+  margin: 0px 10px 3px 13px;
+  transition-property: border;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
 }

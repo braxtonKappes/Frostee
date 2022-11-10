@@ -21,11 +21,10 @@ function App() {
 
   ];
 
-  /*
   <Carousel games={games}/>
+  /*
   <SpecialsCarousel games={games}/>
   <SpecialsCarousel games={games}/>
-
   <CategoryCarousel categories={games}/>
   */
 
