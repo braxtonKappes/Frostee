@@ -7,6 +7,7 @@ import Carousel from './components/Carousel/Carousel';
 import SpecialsCarousel from './components/Carousel/SpecialsCarousel';
 import CategoryCarousel from './components/Carousel/CategoryCarousel';
 import SmallCarousel from './components/Carousel/SmallCarousel';
+import ProfilePage from './components/ProfilePage'
 
 function App() {
 
@@ -30,12 +31,13 @@ function App() {
 
 
   return (
-    <div className='all-content-wrapper'>
+
         <Routes>
           <Route path='/' element={<><NavBar/><HomePage/></>}/>
           <Route path='/complete_registration' element={<SignUp/>}/>
+          <Route path='/profile' element={<><NavBar/><ProfilePage/></>}/>
         </Routes>
-    </div>
+
   );
 }
 
