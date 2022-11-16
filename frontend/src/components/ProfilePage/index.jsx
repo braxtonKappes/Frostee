@@ -16,7 +16,7 @@ export default class index extends Component {
               fsdafsdafdsa
             </div>
             <div className="profile-page-right-col">
-              fdsafsdafdsa
+              fdsafsdaf
             </div>
           </div>
         </div>

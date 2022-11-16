@@ -8,7 +8,6 @@
 .profile-page-body {
   width: 1000px;
   border: solid red;
-  
 }
 
 .profile-page-header {
@@ -17,8 +16,8 @@
   margin: 15px 15px 15px 15px;
 }
 
-
 .profile-page-icon-container img {
+  opacity: 100%;
   width: 150px;
   height: 150px;
   border: solid grey;
